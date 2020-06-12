@@ -9,9 +9,7 @@ d3_cup::d3_cup(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    for(int x=0;x<10;++x){
-        ui->select_date->addItem("Timeslot "+ QString::number(x));
-    }
+
 }
 
 d3_cup::~d3_cup()
@@ -23,7 +21,8 @@ d3_cup::~d3_cup()
 
 void d3_cup::on_pushButton_2_clicked()
 {
-    QMessageBox::information(this,"Confirmed!","Your session for "+ui->select_date->currentText()+" is confirmed");
+    QDateTime time= ui->dt->dateTime();
+    QMessageBox::information(this, "Confirmed!","Your session on "+time.toString("dd-MM-yyyy")+ " at "+time.toString("hh:mm")+ " is confirmed!");
 }
 
 void d3_cup::on_pushButton_clicked()

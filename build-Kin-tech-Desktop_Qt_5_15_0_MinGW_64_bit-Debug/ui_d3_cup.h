@@ -11,12 +11,12 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -24,10 +24,10 @@ QT_BEGIN_NAMESPACE
 class Ui_d3_cup
 {
 public:
-    QComboBox *select_date;
     QLabel *label;
-    QDateTimeEdit *dateTimeEdit;
     QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QDateTimeEdit *dt;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
@@ -37,22 +37,23 @@ public:
         if (d3_cup->objectName().isEmpty())
             d3_cup->setObjectName(QString::fromUtf8("d3_cup"));
         d3_cup->resize(740, 438);
-        select_date = new QComboBox(d3_cup);
-        select_date->setObjectName(QString::fromUtf8("select_date"));
-        select_date->setGeometry(QRect(190, 150, 381, 41));
         label = new QLabel(d3_cup);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(220, 20, 321, 71));
         label->setStyleSheet(QString::fromUtf8("font: 24pt \"MS Reference Sans Serif\";"));
-        dateTimeEdit = new QDateTimeEdit(d3_cup);
-        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
-        dateTimeEdit->setGeometry(QRect(240, 110, 194, 22));
         widget = new QWidget(d3_cup);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(220, 340, 311, 51));
-        horizontalLayout = new QHBoxLayout(widget);
+        widget->setGeometry(QRect(210, 150, 371, 281));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        dt = new QDateTimeEdit(widget);
+        dt->setObjectName(QString::fromUtf8("dt"));
+
+        verticalLayout->addWidget(dt);
+
+        horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(widget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
@@ -62,6 +63,9 @@ public:
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         horizontalLayout->addWidget(pushButton_2);
+
+
+        verticalLayout->addLayout(horizontalLayout);
 
 
         retranslateUi(d3_cup);

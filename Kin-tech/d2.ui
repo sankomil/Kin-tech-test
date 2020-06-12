@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>612</width>
-    <height>388</height>
+    <width>638</width>
+    <height>411</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,17 +32,17 @@
   <widget class="QPushButton" name="back_button">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>290</y>
+     <x>240</x>
+     <y>310</y>
      <width>131</width>
-     <height>61</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="text">
     <string>Back</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>100</x>

@@ -24,7 +24,7 @@ class Ui_d2
 public:
     QLabel *label;
     QPushButton *back_button;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *box_button;
     QPushButton *cup_button;
@@ -33,26 +33,26 @@ public:
     {
         if (d2->objectName().isEmpty())
             d2->setObjectName(QString::fromUtf8("d2"));
-        d2->resize(612, 388);
+        d2->resize(638, 411);
         label = new QLabel(d2);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(180, 10, 281, 71));
         label->setStyleSheet(QString::fromUtf8("font: 26pt \"MS Shell Dlg 2\";"));
         back_button = new QPushButton(d2);
         back_button->setObjectName(QString::fromUtf8("back_button"));
-        back_button->setGeometry(QRect(230, 290, 131, 61));
-        widget = new QWidget(d2);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(100, 140, 401, 101));
-        horizontalLayout = new QHBoxLayout(widget);
+        back_button->setGeometry(QRect(240, 310, 131, 31));
+        layoutWidget = new QWidget(d2);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(100, 140, 401, 101));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        box_button = new QPushButton(widget);
+        box_button = new QPushButton(layoutWidget);
         box_button->setObjectName(QString::fromUtf8("box_button"));
 
         horizontalLayout->addWidget(box_button);
 
-        cup_button = new QPushButton(widget);
+        cup_button = new QPushButton(layoutWidget);
         cup_button->setObjectName(QString::fromUtf8("cup_button"));
 
         horizontalLayout->addWidget(cup_button);
