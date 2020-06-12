@@ -1,5 +1,5 @@
 # Kin Tech Test
-Implementing Basic user UI
+Implementing Basic user UI consisting of three screens as part of an assessment fo Kit Technologies.
 
 
 ## How to run
