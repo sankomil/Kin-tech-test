@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
+#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -25,6 +26,7 @@ class Ui_d3_cup
 public:
     QComboBox *select_date;
     QLabel *label;
+    QDateTimeEdit *dateTimeEdit;
     QWidget *widget;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
@@ -42,6 +44,9 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(220, 20, 321, 71));
         label->setStyleSheet(QString::fromUtf8("font: 24pt \"MS Reference Sans Serif\";"));
+        dateTimeEdit = new QDateTimeEdit(d3_cup);
+        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
+        dateTimeEdit->setGeometry(QRect(240, 110, 194, 22));
         widget = new QWidget(d3_cup);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(220, 340, 311, 51));

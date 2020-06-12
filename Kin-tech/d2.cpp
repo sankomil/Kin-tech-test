@@ -3,7 +3,7 @@
 
 d2::d2(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::d2)
+    ui(new Ui::d2),parent(parent)
 {
     ui->setupUi(this);
 }
@@ -25,4 +25,10 @@ void d2::on_cup_button_clicked()
     hide();
     Cup=new d3_cup(this);
     Cup->show();
+}
+
+void d2::on_back_button_clicked()
+{
+    hide();
+    parent->show();
 }

@@ -5,7 +5,7 @@
 #include "d2.h"
 
 QT_BEGIN_NAMESPACE
-namespace Ui { class d1; }
+namespace Ui { class d1; class d2; class d3_cup;class d3_pillbox;}
 QT_END_NAMESPACE
 
 class d1 : public QMainWindow

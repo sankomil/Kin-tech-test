@@ -23,10 +23,13 @@ private slots:
 
     void on_cup_button_clicked();
 
+    void on_back_button_clicked();
+
 private:
     Ui::d2 *ui;
     d3_cup *Cup;
     d3_pillbox *Pillbox;
+    QWidget* parent;
 };
 
 #endif // D2_H

@@ -15,8 +15,12 @@ public:
     explicit d3_pillbox(QWidget *parent = nullptr);
     ~d3_pillbox();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::d3_pillbox *ui;
+    QWidget* parent;
 };
 
 #endif // D3_PILLBOX_H

@@ -18,8 +18,11 @@ public:
 private slots:
     void on_pushButton_2_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::d3_cup *ui;
+    QWidget* parent;
 };
 
 #endif // D3_CUP_H

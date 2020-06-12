@@ -13,7 +13,9 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -30,6 +32,10 @@ public:
     QCheckBox *checkBox_2;
     QCheckBox *checkBox_3;
     QCheckBox *checkBox_4;
+    QWidget *widget1;
+    QHBoxLayout *horizontalLayout;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
 
     void setupUi(QDialog *d3_pillbox)
     {
@@ -71,6 +77,22 @@ public:
 
         verticalLayout->addWidget(checkBox_4);
 
+        widget1 = new QWidget(d3_pillbox);
+        widget1->setObjectName(QString::fromUtf8("widget1"));
+        widget1->setGeometry(QRect(120, 320, 311, 30));
+        horizontalLayout = new QHBoxLayout(widget1);
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        pushButton = new QPushButton(widget1);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        horizontalLayout->addWidget(pushButton);
+
+        pushButton_2 = new QPushButton(widget1);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        horizontalLayout->addWidget(pushButton_2);
+
 
         retranslateUi(d3_pillbox);
 
@@ -86,6 +108,8 @@ public:
         checkBox_2->setText(QCoreApplication::translate("d3_pillbox", "Date 3", nullptr));
         checkBox_3->setText(QCoreApplication::translate("d3_pillbox", "Date 4", nullptr));
         checkBox_4->setText(QCoreApplication::translate("d3_pillbox", "Date 5", nullptr));
+        pushButton->setText(QCoreApplication::translate("d3_pillbox", "Back", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("d3_pillbox", "Confirm", nullptr));
     } // retranslateUi
 
 };
