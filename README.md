@@ -7,15 +7,13 @@ Implementing Basic user UI
 I am using QT version 5.15.0 with MinGW version 7.3.0 (64-bit). The software is open source. Please copy both the folders in the QT directory and open the project. To run, just build the project and run it.
 
 
-## Tasks Completed
+## Tasks 
 
-1. D1, D2 & D3 pages have been developed.
-2. Options to select on each page are working (except for 'back' button).
-3. Used a combo box to implement single timeslot selection for cup.
+- [x] D1, D2 & D3 pages have been developed.
+- [x] Options to select on each page(except for 'back' button).
+- [x] Used a combo box to implement single timeslot selection for cup.
+- [x] Implement 'back' button.
+- [ ] Implement multiple sessions selection for pillbox.
+- [ ] Improve visuals.
 
 
-## Remaining Tasks
-
-1. Implement 'back' button.
-2. Implement multiple sessions selection for pillbox.
-3. Improve visuals.
