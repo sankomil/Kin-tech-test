@@ -11,12 +11,11 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,17 +24,12 @@ class Ui_d3_pillbox
 {
 public:
     QLabel *label;
-    QWidget *widget;
-    QVBoxLayout *verticalLayout;
-    QCheckBox *checkBox_5;
-    QCheckBox *checkBox;
-    QCheckBox *checkBox_2;
-    QCheckBox *checkBox_3;
-    QCheckBox *checkBox_4;
-    QWidget *widget1;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
+    QPushButton *session_button;
     QPushButton *pushButton_2;
+    QDateTimeEdit *dateTimeEdit;
 
     void setupUi(QDialog *d3_pillbox)
     {
@@ -46,53 +40,30 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(120, 10, 301, 81));
         label->setStyleSheet(QString::fromUtf8("font: 24pt \"MS Shell Dlg 2\";"));
-        widget = new QWidget(d3_pillbox);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(190, 120, 141, 181));
-        verticalLayout = new QVBoxLayout(widget);
-        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        checkBox_5 = new QCheckBox(widget);
-        checkBox_5->setObjectName(QString::fromUtf8("checkBox_5"));
-
-        verticalLayout->addWidget(checkBox_5);
-
-        checkBox = new QCheckBox(widget);
-        checkBox->setObjectName(QString::fromUtf8("checkBox"));
-
-        verticalLayout->addWidget(checkBox);
-
-        checkBox_2 = new QCheckBox(widget);
-        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
-
-        verticalLayout->addWidget(checkBox_2);
-
-        checkBox_3 = new QCheckBox(widget);
-        checkBox_3->setObjectName(QString::fromUtf8("checkBox_3"));
-
-        verticalLayout->addWidget(checkBox_3);
-
-        checkBox_4 = new QCheckBox(widget);
-        checkBox_4->setObjectName(QString::fromUtf8("checkBox_4"));
-
-        verticalLayout->addWidget(checkBox_4);
-
-        widget1 = new QWidget(d3_pillbox);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(120, 320, 311, 30));
-        horizontalLayout = new QHBoxLayout(widget1);
+        layoutWidget = new QWidget(d3_pillbox);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(50, 250, 461, 101));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(widget1);
+        pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
 
         horizontalLayout->addWidget(pushButton);
 
-        pushButton_2 = new QPushButton(widget1);
+        session_button = new QPushButton(layoutWidget);
+        session_button->setObjectName(QString::fromUtf8("session_button"));
+
+        horizontalLayout->addWidget(session_button);
+
+        pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         horizontalLayout->addWidget(pushButton_2);
 
+        dateTimeEdit = new QDateTimeEdit(d3_pillbox);
+        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
+        dateTimeEdit->setGeometry(QRect(140, 130, 271, 41));
 
         retranslateUi(d3_pillbox);
 
@@ -103,12 +74,8 @@ public:
     {
         d3_pillbox->setWindowTitle(QCoreApplication::translate("d3_pillbox", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("d3_pillbox", "Select Session(s)", nullptr));
-        checkBox_5->setText(QCoreApplication::translate("d3_pillbox", "Date 1", nullptr));
-        checkBox->setText(QCoreApplication::translate("d3_pillbox", "Date 2", nullptr));
-        checkBox_2->setText(QCoreApplication::translate("d3_pillbox", "Date 3", nullptr));
-        checkBox_3->setText(QCoreApplication::translate("d3_pillbox", "Date 4", nullptr));
-        checkBox_4->setText(QCoreApplication::translate("d3_pillbox", "Date 5", nullptr));
         pushButton->setText(QCoreApplication::translate("d3_pillbox", "Back", nullptr));
+        session_button->setText(QCoreApplication::translate("d3_pillbox", "Add Session", nullptr));
         pushButton_2->setText(QCoreApplication::translate("d3_pillbox", "Confirm", nullptr));
     } // retranslateUi
 

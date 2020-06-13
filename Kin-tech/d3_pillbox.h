@@ -18,9 +18,14 @@ public:
 private slots:
     void on_pushButton_clicked();
 
+    void on_session_button_clicked();
+
 private:
     Ui::d3_pillbox *ui;
     QWidget* parent;
+    QString date[7];
+    QString time[7];
+    int sessions;
 };
 
 #endif // D3_PILLBOX_H
