@@ -32,10 +32,8 @@ d3_cup::~d3_cup()
 void d3_cup::on_pushButton_2_clicked()
 {
 
-    QMessageBox::information(this,"chec","Your session for Slot"+QString::number(1+ui->buttonGroup->checkedId())+" is confirmed!");
+    QMessageBox::information(this,"Confirmation","Your session for Slot"+QString::number(1+ui->buttonGroup->checkedId())+" is confirmed!");
 
-    //QDateTime time= ui->dt->dateTime();
-    //QMessageBox::information(this, "Confirmed!","Your session on "+time.toString("dd-MM-yyyy")+ " at "+time.toString("hh:mm")+ " is confirmed!");
 }
 
 void d3_cup::on_pushButton_clicked()

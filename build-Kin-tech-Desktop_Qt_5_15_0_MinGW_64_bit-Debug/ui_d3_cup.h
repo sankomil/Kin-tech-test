@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -28,7 +27,6 @@ class Ui_d3_cup
 {
 public:
     QLabel *label;
-    QDateTimeEdit *dt;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
     QVBoxLayout *verticalLayout_2;
@@ -58,17 +56,20 @@ public:
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(220, 20, 321, 71));
         label->setStyleSheet(QString::fromUtf8("font: 24pt \"MS Reference Sans Serif\";"));
-        dt = new QDateTimeEdit(d3_cup);
-        dt->setObjectName(QString::fromUtf8("dt"));
-        dt->setGeometry(QRect(370, 10, 369, 22));
         scrollArea = new QScrollArea(d3_cup);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         scrollArea->setGeometry(QRect(210, 110, 311, 181));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(scrollArea->sizePolicy().hasHeightForWidth());
+        scrollArea->setSizePolicy(sizePolicy);
         scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        scrollArea->setSizeAdjustPolicy(QAbstractScrollArea::AdjustToContents);
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, -108, 288, 287));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 288, 287));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_3 = new QVBoxLayout();
@@ -78,59 +79,79 @@ public:
         buttonGroup->setObjectName(QString::fromUtf8("buttonGroup"));
         buttonGroup->addButton(radioButton);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        sizePolicy.setHeightForWidth(radioButton->sizePolicy().hasHeightForWidth());
+        radioButton->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton);
 
         radioButton_2 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_2);
         radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+        sizePolicy.setHeightForWidth(radioButton_2->sizePolicy().hasHeightForWidth());
+        radioButton_2->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_2);
 
         radioButton_3 = new QRadioButton(scrollAreaWidgetContents);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
+        sizePolicy.setHeightForWidth(radioButton_3->sizePolicy().hasHeightForWidth());
+        radioButton_3->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_3);
 
         radioButton_4 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_4);
         radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
+        sizePolicy.setHeightForWidth(radioButton_4->sizePolicy().hasHeightForWidth());
+        radioButton_4->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_4);
 
         radioButton_5 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_5);
         radioButton_5->setObjectName(QString::fromUtf8("radioButton_5"));
+        sizePolicy.setHeightForWidth(radioButton_5->sizePolicy().hasHeightForWidth());
+        radioButton_5->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_5);
 
         radioButton_6 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_6);
         radioButton_6->setObjectName(QString::fromUtf8("radioButton_6"));
+        sizePolicy.setHeightForWidth(radioButton_6->sizePolicy().hasHeightForWidth());
+        radioButton_6->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_6);
 
         radioButton_7 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_7);
         radioButton_7->setObjectName(QString::fromUtf8("radioButton_7"));
+        sizePolicy.setHeightForWidth(radioButton_7->sizePolicy().hasHeightForWidth());
+        radioButton_7->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_7);
 
         radioButton_8 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_8);
         radioButton_8->setObjectName(QString::fromUtf8("radioButton_8"));
+        sizePolicy.setHeightForWidth(radioButton_8->sizePolicy().hasHeightForWidth());
+        radioButton_8->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_8);
 
         radioButton_9 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_9);
         radioButton_9->setObjectName(QString::fromUtf8("radioButton_9"));
+        sizePolicy.setHeightForWidth(radioButton_9->sizePolicy().hasHeightForWidth());
+        radioButton_9->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_9);
 
         radioButton_10 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_10);
         radioButton_10->setObjectName(QString::fromUtf8("radioButton_10"));
+        sizePolicy.setHeightForWidth(radioButton_10->sizePolicy().hasHeightForWidth());
+        radioButton_10->setSizePolicy(sizePolicy);
 
         verticalLayout_3->addWidget(radioButton_10);
 
@@ -141,16 +162,22 @@ public:
         widget = new QWidget(d3_cup);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(240, 310, 249, 89));
+        sizePolicy.setHeightForWidth(widget->sizePolicy().hasHeightForWidth());
+        widget->setSizePolicy(sizePolicy);
         horizontalLayout = new QHBoxLayout(widget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(widget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
+        pushButton->setSizePolicy(sizePolicy);
 
         horizontalLayout->addWidget(pushButton);
 
         pushButton_2 = new QPushButton(widget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        sizePolicy.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
+        pushButton_2->setSizePolicy(sizePolicy);
 
         horizontalLayout->addWidget(pushButton_2);
 
