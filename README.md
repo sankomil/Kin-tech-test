@@ -1,5 +1,5 @@
 # Kin Tech Test
-Implementing Basic user UI consisting of three screens as part of an assessment fo Kin Technologies.
+Implementing Basic user UI consisting of three screens as part of an assessment fo Kin Technologies. This was developed using C++ based QT.
 
 
 ## How to run
