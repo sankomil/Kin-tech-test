@@ -29,40 +29,175 @@
     <string>Select Session</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QDateTimeEdit" name="dt">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>10</y>
+     <width>369</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>150</y>
-     <width>371</width>
-     <height>281</height>
+     <y>110</y>
+     <width>311</width>
+     <height>181</height>
     </rect>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOn</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-108</y>
+      <width>288</width>
+      <height>287</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QRadioButton" name="radioButton">
+         <property name="text">
+          <string>Slot1</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_2">
+         <property name="text">
+          <string>Slot2</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_3">
+         <property name="text">
+          <string>Slot3</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_4">
+         <property name="text">
+          <string>Slot4</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_5">
+         <property name="text">
+          <string>Slot5</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_6">
+         <property name="text">
+          <string>Slot6</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_7">
+         <property name="text">
+          <string>Slot7</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_8">
+         <property name="text">
+          <string>Slot8</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_9">
+         <property name="text">
+          <string>Slot9</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_10">
+         <property name="text">
+          <string>Slot10</string>
+         </property>
+         <attribute name="buttonGroup">
+          <string notr="true">buttonGroup</string>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>310</y>
+     <width>249</width>
+     <height>89</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QDateTimeEdit" name="dt"/>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>Back</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="text">
-         <string>Confirm</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Confirm</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
  </widget>
  <resources/>
  <connections/>
+ <buttongroups>
+  <buttongroup name="buttonGroup"/>
+ </buttongroups>
 </ui>

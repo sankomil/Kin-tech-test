@@ -1,6 +1,7 @@
 #include "d3_pillbox.h"
 #include "ui_d3_pillbox.h"
 #include <QMessageBox>
+#include <QScrollArea>
 
 d3_pillbox::d3_pillbox(QWidget *parent) :
     QDialog(parent),
@@ -11,6 +12,7 @@ d3_pillbox::d3_pillbox(QWidget *parent) :
         date[x]=" ";
         time[x]=" ";
     }
+
 
 }
 

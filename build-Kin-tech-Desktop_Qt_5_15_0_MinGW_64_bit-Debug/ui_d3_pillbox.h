@@ -63,7 +63,7 @@ public:
 
         dateTimeEdit = new QDateTimeEdit(d3_pillbox);
         dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
-        dateTimeEdit->setGeometry(QRect(140, 130, 271, 41));
+        dateTimeEdit->setGeometry(QRect(420, 20, 111, 16));
 
         retranslateUi(d3_pillbox);
 
