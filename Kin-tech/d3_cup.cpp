@@ -32,7 +32,7 @@ d3_cup::~d3_cup()
 void d3_cup::on_pushButton_2_clicked()
 {
 
-    QMessageBox::information(this,"Confirmation","Your session for Slot"+QString::number(1+ui->buttonGroup->checkedId())+" is confirmed!");
+    QMessageBox::information(this,"Confirmation","Your session for "+ui->buttonGroup->checkedButton()->text()+" is confirmed!");
 
 }
 

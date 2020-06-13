@@ -18,7 +18,9 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_session_button_clicked();
+
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::d3_pillbox *ui;

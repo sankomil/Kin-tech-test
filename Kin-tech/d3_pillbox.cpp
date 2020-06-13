@@ -2,6 +2,8 @@
 #include "ui_d3_pillbox.h"
 #include <QMessageBox>
 #include <QScrollArea>
+#include <QDebug>
+#include <QString>
 
 d3_pillbox::d3_pillbox(QWidget *parent) :
     QDialog(parent),
@@ -27,16 +29,27 @@ void d3_pillbox::on_pushButton_clicked()
     parent->show();
 }
 
-void d3_pillbox::on_session_button_clicked()
-{
-    QDateTime period=ui->dateTimeEdit->dateTime();
-    if(sessions<7){
-       date[sessions]=period.toString("dd-MM-yyyy");
-       time[sessions]=period.toString("hh-mm");
-       ++sessions;
-    }
-    else{
-        QMessageBox::warning(this,"Max Sessions","You can only select 7 sessions at once");
-    }
 
+void d3_pillbox::on_pushButton_2_clicked()
+{
+    QString sessions[7];
+    int chosen=0;
+    QList<QCheckBox *> allButtons = ui->groupBox->findChildren<QCheckBox *>();
+    for(int i = 0; i < allButtons.size(); ++i)
+    {
+        if(allButtons.at(i)->isChecked()){
+            ++chosen;
+        }
+    }
+    if(chosen>=8){QMessageBox::critical(this,"Error","Please select only 7 sessions or less");}
+    else{
+        int pos=0;
+        for(int i = 0; i < allButtons.size(); ++i)
+        {
+            if(allButtons.at(i)->isChecked()){
+                sessions[pos]=allButtons.at(i)->text();
+            }
+        }
+        QMessageBox::information(this,"Confirmed","Your "+ QString::number(chosen)+" sessions have been confirmed!");
+    }
 }

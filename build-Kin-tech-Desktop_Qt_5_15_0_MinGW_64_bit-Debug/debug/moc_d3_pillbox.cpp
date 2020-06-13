@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_d3_pillbox_t {
     QByteArrayData data[4];
-    char stringdata0[60];
+    char stringdata0[58];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,11 +35,11 @@ static const qt_meta_stringdata_d3_pillbox_t qt_meta_stringdata_d3_pillbox = {
 QT_MOC_LITERAL(0, 0, 10), // "d3_pillbox"
 QT_MOC_LITERAL(1, 11, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 25) // "on_session_button_clicked"
+QT_MOC_LITERAL(3, 34, 23) // "on_pushButton_2_clicked"
 
     },
     "d3_pillbox\0on_pushButton_clicked\0\0"
-    "on_session_button_clicked"
+    "on_pushButton_2_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -74,7 +74,7 @@ void d3_pillbox::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->on_session_button_clicked(); break;
+        case 1: _t->on_pushButton_2_clicked(); break;
         default: ;
         }
     }

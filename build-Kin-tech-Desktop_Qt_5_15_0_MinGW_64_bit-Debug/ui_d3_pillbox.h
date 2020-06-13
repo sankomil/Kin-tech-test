@@ -11,11 +11,15 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QDateTimeEdit>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,9 +31,22 @@ public:
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
-    QPushButton *session_button;
     QPushButton *pushButton_2;
-    QDateTimeEdit *dateTimeEdit;
+    QScrollArea *scrollArea;
+    QWidget *scrollAreaWidgetContents;
+    QGridLayout *gridLayout;
+    QGroupBox *groupBox;
+    QVBoxLayout *verticalLayout;
+    QCheckBox *checkBox;
+    QCheckBox *checkBox_2;
+    QCheckBox *checkBox_3;
+    QCheckBox *checkBox_4;
+    QCheckBox *checkBox_10;
+    QCheckBox *checkBox_6;
+    QCheckBox *checkBox_7;
+    QCheckBox *checkBox_5;
+    QCheckBox *checkBox_8;
+    QCheckBox *checkBox_9;
 
     void setupUi(QDialog *d3_pillbox)
     {
@@ -51,19 +68,78 @@ public:
 
         horizontalLayout->addWidget(pushButton);
 
-        session_button = new QPushButton(layoutWidget);
-        session_button->setObjectName(QString::fromUtf8("session_button"));
-
-        horizontalLayout->addWidget(session_button);
-
         pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         horizontalLayout->addWidget(pushButton_2);
 
-        dateTimeEdit = new QDateTimeEdit(d3_pillbox);
-        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
-        dateTimeEdit->setGeometry(QRect(420, 20, 111, 16));
+        scrollArea = new QScrollArea(d3_pillbox);
+        scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
+        scrollArea->setGeometry(QRect(80, 90, 401, 151));
+        scrollArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 378, 325));
+        gridLayout = new QGridLayout(scrollAreaWidgetContents);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        groupBox = new QGroupBox(scrollAreaWidgetContents);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        verticalLayout = new QVBoxLayout(groupBox);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        checkBox = new QCheckBox(groupBox);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+
+        verticalLayout->addWidget(checkBox);
+
+        checkBox_2 = new QCheckBox(groupBox);
+        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+
+        verticalLayout->addWidget(checkBox_2);
+
+        checkBox_3 = new QCheckBox(groupBox);
+        checkBox_3->setObjectName(QString::fromUtf8("checkBox_3"));
+
+        verticalLayout->addWidget(checkBox_3);
+
+        checkBox_4 = new QCheckBox(groupBox);
+        checkBox_4->setObjectName(QString::fromUtf8("checkBox_4"));
+
+        verticalLayout->addWidget(checkBox_4);
+
+        checkBox_10 = new QCheckBox(groupBox);
+        checkBox_10->setObjectName(QString::fromUtf8("checkBox_10"));
+
+        verticalLayout->addWidget(checkBox_10);
+
+        checkBox_6 = new QCheckBox(groupBox);
+        checkBox_6->setObjectName(QString::fromUtf8("checkBox_6"));
+
+        verticalLayout->addWidget(checkBox_6);
+
+        checkBox_7 = new QCheckBox(groupBox);
+        checkBox_7->setObjectName(QString::fromUtf8("checkBox_7"));
+
+        verticalLayout->addWidget(checkBox_7);
+
+        checkBox_5 = new QCheckBox(groupBox);
+        checkBox_5->setObjectName(QString::fromUtf8("checkBox_5"));
+
+        verticalLayout->addWidget(checkBox_5);
+
+        checkBox_8 = new QCheckBox(groupBox);
+        checkBox_8->setObjectName(QString::fromUtf8("checkBox_8"));
+
+        verticalLayout->addWidget(checkBox_8);
+
+        checkBox_9 = new QCheckBox(groupBox);
+        checkBox_9->setObjectName(QString::fromUtf8("checkBox_9"));
+
+        verticalLayout->addWidget(checkBox_9);
+
+
+        gridLayout->addWidget(groupBox, 0, 1, 1, 1);
+
+        scrollArea->setWidget(scrollAreaWidgetContents);
 
         retranslateUi(d3_pillbox);
 
@@ -75,8 +151,18 @@ public:
         d3_pillbox->setWindowTitle(QCoreApplication::translate("d3_pillbox", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("d3_pillbox", "Select Session(s)", nullptr));
         pushButton->setText(QCoreApplication::translate("d3_pillbox", "Back", nullptr));
-        session_button->setText(QCoreApplication::translate("d3_pillbox", "Add Session", nullptr));
         pushButton_2->setText(QCoreApplication::translate("d3_pillbox", "Confirm", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("d3_pillbox", "Available Sessions", nullptr));
+        checkBox->setText(QCoreApplication::translate("d3_pillbox", "Slot1", nullptr));
+        checkBox_2->setText(QCoreApplication::translate("d3_pillbox", "Slot2", nullptr));
+        checkBox_3->setText(QCoreApplication::translate("d3_pillbox", "Slot3", nullptr));
+        checkBox_4->setText(QCoreApplication::translate("d3_pillbox", "Slot4", nullptr));
+        checkBox_10->setText(QCoreApplication::translate("d3_pillbox", "Slot5", nullptr));
+        checkBox_6->setText(QCoreApplication::translate("d3_pillbox", "Slot6", nullptr));
+        checkBox_7->setText(QCoreApplication::translate("d3_pillbox", "Slot7", nullptr));
+        checkBox_5->setText(QCoreApplication::translate("d3_pillbox", "Slot8", nullptr));
+        checkBox_8->setText(QCoreApplication::translate("d3_pillbox", "Slot9", nullptr));
+        checkBox_9->setText(QCoreApplication::translate("d3_pillbox", "Slot10", nullptr));
     } // retranslateUi
 
 };
