@@ -15,7 +15,8 @@ I am using QT version 5.15.0 with MinGW version 7.3.0 (64-bit). The software is 
 - [x] Improved date and time selection for 'cup' screen.
 - [x] Implement multiple sessions selection for pillbox.
 - [x] Improved session selection for 'cup' screen.
-- [ ] Improve session(s) selection for 'pillbox' screen.
+- [x] Improve session(s) selection for 'pillbox' screen.
+- [ ] Get rid of error with slot3 in 'cup' box.
 - [ ] Add background colours for screen and buttons.
 
 
