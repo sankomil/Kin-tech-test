@@ -52,13 +52,16 @@ public:
         if (d3_cup->objectName().isEmpty())
             d3_cup->setObjectName(QString::fromUtf8("d3_cup"));
         d3_cup->resize(740, 438);
+        d3_cup->setStyleSheet(QString::fromUtf8("\n"
+"background-color: rgb(37, 136, 142);"));
         label = new QLabel(d3_cup);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(220, 20, 321, 71));
-        label->setStyleSheet(QString::fromUtf8("font: 24pt \"MS Reference Sans Serif\";"));
+        label->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255);\n"
+"font: 24pt \"Rockwell\";"));
         layoutWidget = new QWidget(d3_cup);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(240, 310, 249, 89));
+        layoutWidget->setGeometry(QRect(230, 300, 249, 89));
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -74,6 +77,9 @@ public:
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy1);
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(37, 136, 143);\n"
+"font-weight: bold;"));
 
         horizontalLayout->addWidget(pushButton);
 
@@ -81,16 +87,23 @@ public:
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
         sizePolicy1.setHeightForWidth(pushButton_2->sizePolicy().hasHeightForWidth());
         pushButton_2->setSizePolicy(sizePolicy1);
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255,255,255);\n"
+"color: rgb(37, 136, 143);\n"
+"font-weight: bold;\n"
+""));
 
         horizontalLayout->addWidget(pushButton_2);
 
         scrollArea = new QScrollArea(d3_cup);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         scrollArea->setGeometry(QRect(210, 120, 281, 131));
+        scrollArea->setStyleSheet(QString::fromUtf8("background-color: rgb(117, 201, 202);\n"
+""));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
         scrollAreaWidgetContents->setGeometry(QRect(0, 0, 258, 287));
+        scrollAreaWidgetContents->setStyleSheet(QString::fromUtf8(""));
         verticalLayout_2 = new QVBoxLayout(scrollAreaWidgetContents);
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout = new QVBoxLayout();
@@ -100,60 +113,70 @@ public:
         buttonGroup->setObjectName(QString::fromUtf8("buttonGroup"));
         buttonGroup->addButton(radioButton);
         radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        radioButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton);
 
         radioButton_2 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_2);
         radioButton_2->setObjectName(QString::fromUtf8("radioButton_2"));
+        radioButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_2);
 
         radioButton_3 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_3);
         radioButton_3->setObjectName(QString::fromUtf8("radioButton_3"));
+        radioButton_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_3);
 
         radioButton_4 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_4);
         radioButton_4->setObjectName(QString::fromUtf8("radioButton_4"));
+        radioButton_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_4);
 
         radioButton_5 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_5);
         radioButton_5->setObjectName(QString::fromUtf8("radioButton_5"));
+        radioButton_5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_5);
 
         radioButton_6 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_6);
         radioButton_6->setObjectName(QString::fromUtf8("radioButton_6"));
+        radioButton_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_6);
 
         radioButton_7 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_7);
         radioButton_7->setObjectName(QString::fromUtf8("radioButton_7"));
+        radioButton_7->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_7);
 
         radioButton_8 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_8);
         radioButton_8->setObjectName(QString::fromUtf8("radioButton_8"));
+        radioButton_8->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_8);
 
         radioButton_9 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_9);
         radioButton_9->setObjectName(QString::fromUtf8("radioButton_9"));
+        radioButton_9->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(radioButton_9);
 
         radioButton_10 = new QRadioButton(scrollAreaWidgetContents);
         buttonGroup->addButton(radioButton_10);
         radioButton_10->setObjectName(QString::fromUtf8("radioButton_10"));
+        radioButton_10->setStyleSheet(QString::fromUtf8("background-color: rgb(255,255,255);"));
 
         verticalLayout->addWidget(radioButton_10);
 
@@ -171,6 +194,7 @@ public:
     {
         d3_cup->setWindowTitle(QCoreApplication::translate("d3_cup", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("d3_cup", "Select Session", nullptr));
+        layoutWidget->setStyleSheet(QCoreApplication::translate("d3_cup", "background-color: rgb(37, 136, 143);", nullptr));
         pushButton->setText(QCoreApplication::translate("d3_cup", "Back", nullptr));
         pushButton_2->setText(QCoreApplication::translate("d3_cup", "Confirm", nullptr));
         radioButton->setText(QCoreApplication::translate("d3_cup", "Slot 1", nullptr));

@@ -32,8 +32,12 @@ d3_cup::~d3_cup()
 void d3_cup::on_pushButton_2_clicked()
 {
 
+    QString temp=this->styleSheet();
+    this->setStyleSheet("background-color:rgb(255,255,255)");
+    hide();
     QMessageBox::information(this,"Confirmation","Your session for "+ui->buttonGroup->checkedButton()->text()+" is confirmed!");
-
+    this->setStyleSheet(temp);
+    show();
 }
 
 void d3_cup::on_pushButton_clicked()

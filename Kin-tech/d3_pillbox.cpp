@@ -41,7 +41,14 @@ void d3_pillbox::on_pushButton_2_clicked()
             ++chosen;
         }
     }
-    if(chosen>=8){QMessageBox::critical(this,"Error","Please select only 7 sessions or less");}
+    if(chosen>=8){
+        QString temp=this->styleSheet();
+        this->setStyleSheet("background-color:rgb(255,255,255)");
+        hide();
+        QMessageBox::critical(this,"Error","Please select only 7 sessions or less");
+        this->setStyleSheet(temp);
+        show();
+    }
     else{
         int pos=0;
         for(int i = 0; i < allButtons.size(); ++i)
@@ -50,6 +57,11 @@ void d3_pillbox::on_pushButton_2_clicked()
                 sessions[pos]=allButtons.at(i)->text();
             }
         }
-        QMessageBox::information(this,"Confirmed","Your "+ QString::number(chosen)+" sessions have been confirmed!");
+        QString temp=this->styleSheet();
+        this->setStyleSheet("background-color:rgb(255,255,255)");
+        hide();
+        QMessageBox::information(this,"Confirmed","Your "+ QString::number(chosen)+" session(s) have been confirmed!");
+        this->setStyleSheet(temp);
+        show();
     }
 }

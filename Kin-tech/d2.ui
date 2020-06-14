@@ -13,17 +13,22 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(37, 136, 142);</string>
+  </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>200</x>
      <y>10</y>
      <width>281</width>
      <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 26pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">color:rgb(255, 255, 255);
+font: 24pt &quot;Rockwell&quot;;</string>
    </property>
    <property name="text">
     <string>Dispense to</string>
@@ -37,6 +42,11 @@
      <width>131</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(37, 136, 143);
+font-weight: bold;</string>
    </property>
    <property name="text">
     <string>Back</string>
@@ -54,6 +64,11 @@
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QPushButton" name="box_button">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(37, 136, 143);
+font-weight: bold;</string>
+      </property>
       <property name="text">
        <string>Pillbox</string>
       </property>
@@ -61,6 +76,11 @@
     </item>
     <item>
      <widget class="QPushButton" name="cup_button">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(37, 136, 143);
+font-weight: bold;</string>
+      </property>
       <property name="text">
        <string>Cup</string>
       </property>

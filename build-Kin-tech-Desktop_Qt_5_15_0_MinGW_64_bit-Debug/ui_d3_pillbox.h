@@ -53,29 +53,40 @@ public:
         if (d3_pillbox->objectName().isEmpty())
             d3_pillbox->setObjectName(QString::fromUtf8("d3_pillbox"));
         d3_pillbox->resize(537, 379);
+        d3_pillbox->setStyleSheet(QString::fromUtf8("background-color: rgb(37, 136, 142);"));
         label = new QLabel(d3_pillbox);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(120, 10, 301, 81));
-        label->setStyleSheet(QString::fromUtf8("font: 24pt \"MS Shell Dlg 2\";"));
+        label->setGeometry(QRect(120, 10, 311, 81));
+        label->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255);\n"
+"font: 24pt \"Rockwell\";"));
         layoutWidget = new QWidget(d3_pillbox);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(50, 250, 461, 101));
+        layoutWidget->setStyleSheet(QString::fromUtf8(""));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         pushButton = new QPushButton(layoutWidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(37, 136, 143);\n"
+"font-weight: bold;"));
 
         horizontalLayout->addWidget(pushButton);
 
         pushButton_2 = new QPushButton(layoutWidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"color: rgb(37, 136, 143);\n"
+"font-weight: bold;"));
 
         horizontalLayout->addWidget(pushButton_2);
 
         scrollArea = new QScrollArea(d3_pillbox);
         scrollArea->setObjectName(QString::fromUtf8("scrollArea"));
         scrollArea->setGeometry(QRect(80, 90, 401, 151));
+        scrollArea->setStyleSheet(QString::fromUtf8("background-color: rgb(117, 201, 202);\n"
+""));
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QString::fromUtf8("scrollAreaWidgetContents"));
@@ -84,55 +95,66 @@ public:
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         groupBox = new QGroupBox(scrollAreaWidgetContents);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setStyleSheet(QString::fromUtf8(""));
         verticalLayout = new QVBoxLayout(groupBox);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         checkBox = new QCheckBox(groupBox);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
+        checkBox->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox);
 
         checkBox_2 = new QCheckBox(groupBox);
         checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+        checkBox_2->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_2);
 
         checkBox_3 = new QCheckBox(groupBox);
         checkBox_3->setObjectName(QString::fromUtf8("checkBox_3"));
+        checkBox_3->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_3);
 
         checkBox_4 = new QCheckBox(groupBox);
         checkBox_4->setObjectName(QString::fromUtf8("checkBox_4"));
+        checkBox_4->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_4);
 
         checkBox_10 = new QCheckBox(groupBox);
         checkBox_10->setObjectName(QString::fromUtf8("checkBox_10"));
+        checkBox_10->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_10);
 
         checkBox_6 = new QCheckBox(groupBox);
         checkBox_6->setObjectName(QString::fromUtf8("checkBox_6"));
+        checkBox_6->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_6);
 
         checkBox_7 = new QCheckBox(groupBox);
         checkBox_7->setObjectName(QString::fromUtf8("checkBox_7"));
+        checkBox_7->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_7);
 
         checkBox_5 = new QCheckBox(groupBox);
         checkBox_5->setObjectName(QString::fromUtf8("checkBox_5"));
+        checkBox_5->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_5);
 
         checkBox_8 = new QCheckBox(groupBox);
         checkBox_8->setObjectName(QString::fromUtf8("checkBox_8"));
+        checkBox_8->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_8);
 
         checkBox_9 = new QCheckBox(groupBox);
         checkBox_9->setObjectName(QString::fromUtf8("checkBox_9"));
+        checkBox_9->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         verticalLayout->addWidget(checkBox_9);
 
